@@ -10,3 +10,9 @@ C:\Users\Admin\Desktop\CNPM\1.0\DAL_Server\obj\Debug\DAL_Server.csproj.AssemblyR
 C:\Users\Admin\Desktop\CNPM\1.0\DAL_Server\obj\Debug\DAL_Server.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\CNPM\1.0\DAL_Server\obj\Debug\DAL_Server.dll
 C:\Users\Admin\Desktop\CNPM\1.0\DAL_Server\obj\Debug\DAL_Server.pdb
+C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\DAL_Server\bin\Debug\DAL_Server.dll
+C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\DAL_Server\bin\Debug\DAL_Server.pdb
+C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\DAL_Server\obj\Debug\DAL_Server.csproj.AssemblyReference.cache
+C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\DAL_Server\obj\Debug\DAL_Server.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\DAL_Server\obj\Debug\DAL_Server.dll
+C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\DAL_Server\obj\Debug\DAL_Server.pdb

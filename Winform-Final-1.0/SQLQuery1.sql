@@ -89,7 +89,8 @@ VALUES ('D001', 'distributor1', 'password1');
 
 -- Insert data into the Agent table to represent a reseller/agent
 INSERT INTO Agent (AgentID, AgentName, AgentAccount, AgentPassword, AgentAddress, AgentPhoneNumber)
-VALUES ('A001', 'Agent1', 'agent1', 'password1', '123 Main Street', '555-1234');
+VALUES ('A001', 'Agent1', 'agent1', 'password1', '123 Main Street', '555-1234'),
+('A002', 'Agent2', 'agent2', 'password2', 'Tan Phong', '999-8888');
 
 -- Insert data into the WarehouseReceipt table to represent an import of goods by the distributor
 INSERT INTO WarehouseReceipt (TotalWarehouseQuantity, TotalWarehousePrice, CreatedDate)

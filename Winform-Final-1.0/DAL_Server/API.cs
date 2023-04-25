@@ -208,37 +208,6 @@ namespace DAL_Server
             DataTable dt = Connection.SelectQuery(sql);
             return dt;
         }
-        // thêm hoặc cập nhật sản phẩm bán chạy
-        public static void AddOrUpdateBestSellingProduct(string productID, string productName, int totalSales)
-        {
-            string sql = "SELECT * FROM BestSellingProduct WHERE ProductID = '" + productID + "'";
-            DataTable dt = Connection.SelectQuery(sql);
-            if (dt != null && dt.Rows.Count > 0)
-            {
-                sql = "UPDATE BestSellingProduct SET TotalSales = " + totalSales + " WHERE ProductID = '" + productID + "'";
-                Connection.ActionQuery(sql);
-            }
-            else
-            {
-                sql = "INSERT INTO BestSellingProduct VALUES ('" + productID + "', N'" + productName + "', " + totalSales + ")";
-                Connection.ActionQuery(sql);
-            }
-        }
-        // hiện tất cả các sản phẩm bán chạy
-        public static DataTable ShowAllBestSellingProducts()
-        {
-            string sql = "SELECT * FROM BestSellingProduct";
-            DataTable dt = Connection.SelectQuery(sql);
-            return dt;
-        }
-        // hiện sản phẩm bán chạy nhất theo tháng nhập vào dựa vào bảng OrderReceipt
-        public static DataTable ShowBestSellingProductByMonth(string month)
-        {
-            string sql = "SELECT ProductID, ProductName, SUM(TotalProductQuantity) AS TotalSales FROM IncludeOrderProducts INNER JOIN Product ON IncludeOrderProducts.ProductID = Product.ProductID INNER JOIN OrderReceipt ON IncludeOrderProducts.OrderID = OrderReceipt.OrderID WHERE MONTH(OrderedDate) = " + month + " GROUP BY ProductID, ProductName ORDER BY TotalSales DESC";
-            DataTable dt = Connection.SelectQuery(sql);
-            return dt;
-        }
- 
         public static string GetNewProductID()
         {
             string sql = "SELECT MAX(ProductID) FROM Product";

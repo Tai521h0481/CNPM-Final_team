@@ -279,17 +279,6 @@ CREATE TABLE RevenueReport
                             showProduct();
                         }
                     }
-                    // sản phẩm bán chạy AddOrUpdateBestSellingProduct(string productID, string productName, int totalSales)
-                    foreach (DataGridViewRow row in dtGVODetail.Rows)
-                    {
-                        if (row.Index != dtGVODetail.RowCount - 1)
-                        {
-                            string id = row.Cells[0].Value.ToString();
-                            string name = row.Cells[1].Value.ToString();
-                            int amount = int.Parse(row.Cells[3].Value.ToString());
-                            API.AddOrUpdateBestSellingProduct(id, name, amount);
-                        }
-                    }
                     txtAmount.Text = "";
                     // xóa hàng trong dataGVOrder
                     dtGVODetail.Rows.Clear();

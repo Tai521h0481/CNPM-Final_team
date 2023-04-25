@@ -14,7 +14,7 @@ namespace DAL_Server
 
         public static void Connect()
         {
-            string sql = "Data Source=DESKTOP-DN8EH6I\\SQLEXPRESS;Database=MobilePhone;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string sql = "Data Source=LAPTOP-GRPP68U1\\SQLEXPRESS;Database=MobilePhone;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             conn = new SqlConnection(sql);
             conn.Open();
         }
