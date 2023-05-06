@@ -71,7 +71,7 @@ namespace Winform_Final
                 else
                 {
                     // hiện thông báo tiền của hóa đơn đang chọn, nếu ấn Yes thì cập nhật trạng thái đã thanh toán và thanh toán bằng phương thức đã chọn
-                    if (MessageBox.Show("The total amount of the order is: " + dataGridView1.CurrentRow.Cells[1].Value.ToString() + " VND. Do you want to pay?", "Payment", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("The total amount of the order is: " + dataGridView1.CurrentRow.Cells[1].Value.ToString() + " $. Do you want to pay?", "Payment", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         string paymentMethod = "";
                         if (txtCash.Checked == true)
