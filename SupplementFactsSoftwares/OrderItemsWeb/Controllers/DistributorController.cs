@@ -27,5 +27,10 @@ namespace OrderItemsWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult Product()
+        {
+            return View();
+        }
     }
 }
