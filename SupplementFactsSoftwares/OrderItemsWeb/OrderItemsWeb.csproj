@@ -244,9 +244,13 @@
     <Content Include="Views\Login\LoginForm.cshtml" />
     <Content Include="Views\Distributor\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDistributor.cshtml" />
+    <Content Include="Views\Distributor\GoodRecived.cshtml" />
+    <Content Include="Views\Distributor\GoodDelivery.cshtml" />
+    <Content Include="Views\Distributor\GoodView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

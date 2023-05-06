@@ -13,5 +13,19 @@ namespace OrderItemsWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult GoodRecived()
+        {
+            return View();
+        }
+
+        public ActionResult GoodDelivery()
+        {
+            return View();
+        }
+        public ActionResult GoodView()
+        {
+            return View();
+        }
     }
 }
