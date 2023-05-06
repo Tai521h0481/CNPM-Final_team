@@ -1,0 +1,47 @@
+﻿@model IEnumerable<OrderItemsWeb.Models.IncludeOrderProduct>
+
+@{
+	ViewBag.Title = "OrderDetail";
+}
+
+<h2>Order Detail</h2>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Order ID</th>
+			<th>
+				Product Name
+			</th>
+			<th>
+				Total Quantity
+			</th>
+			<th>
+				Total Price
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@{
+			var products = ViewBag.Products as IEnumerable<OrderItemsWeb.Models.Product>;
+		}
+		@foreach (var item in Model)
+		{
+			var productName = products.FirstOrDefault(p => p.ProductID == item.ProductID).ProductName;
+			<tr>
+				<td>@item.OrderID</td>
+				<td>
+					@productName
+				</td>
+				<td>
+					@item.TotalProductQuantity
+				</td>
+				<td>
+					@item.TotalProductPrice
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+@Html.ActionLink("Back to Orders", "Orders", "OrderCart", null, new { @class = "btn btn-success" })
+@Html.ActionLink("Continuing Order?", "Index", "Products", null, new { @class = "btn btn-primary" })
+

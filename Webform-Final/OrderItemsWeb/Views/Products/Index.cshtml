@@ -1,0 +1,46 @@
+﻿@model IEnumerable<OrderItemsWeb.Models.Product>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>List Products</h2>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>
+				Product Name
+			</th>
+			<th>
+				Total Product Quantity
+			</th>
+			<th>
+				Product Price
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			if (item.ProductQuantity > 0)
+			{
+				<tr>
+					<td>
+						@item.ProductName
+					</td>
+					<td>
+						@item.ProductQuantity
+					</td>
+					<td>
+						@item.ProductPrice$
+					</td>
+					<td>
+						@Html.ActionLink("Add to cart", "OrderNow", "OrderCart", new { id = item.ProductID }, new { @class = "btn btn-primary" })
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
