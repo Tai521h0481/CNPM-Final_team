@@ -78,29 +78,6 @@ CREATE TABLE Distributor
   DistributorPassword NVARCHAR(50) NOT NULL
 );
 
-CREATE TABLE StockReport
-(
-  ReportID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  ReportDate DATE NOT NULL,
-  IncomingStock INT NOT NULL,
-  OutgoingStock INT NOT NULL
-);
-
-CREATE TABLE BestSellingProduct
-(
-  ProductID VARCHAR(10) NOT NULL PRIMARY KEY,
-  ProductName NVARCHAR(50) NOT NULL,
-  TotalSales INT NOT NULL,
-  CONSTRAINT FkBestSellingProduct_ProductID FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
-);
-
-CREATE TABLE RevenueReport
-(
-  ReportID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  ReportMonth INT NOT NULL,
-  ReportYear INT NOT NULL,
-  TotalRevenue INT NOT NULL
-);
  */
 
 namespace DAL_Server
@@ -111,8 +88,13 @@ namespace DAL_Server
         public static bool CheckLoginWithDistributor(string distributorAccount, string distributorPassword)
         {
             string sql = "SELECT * FROM Distributor WHERE DistributorAccount = '" + distributorAccount + "' AND DistributorPassword = '" + distributorPassword + "'";
-            DataTable dt = Connection.SelectQuery(sql);
-            if (dt.Rows.Count > 0)
+            DataTable dt = new DataTable();
+            dt = Connection.SelectQuery(sql);
+            if (dt == null)
+            {
+                return false;
+            }
+            else if (dt.Rows.Count > 0)
             {
                 return true;
             }
@@ -124,9 +106,13 @@ namespace DAL_Server
         {
             string sql = "SELECT * FROM Agent WHERE AgentAccount = '" + agentAccount + "' AND AgentPassword = '" + agentPassword + "'";
             DataTable dt = Connection.SelectQuery(sql);
-            Agent = dt;
-            if (dt.Rows.Count > 0)
+            if (dt == null)
             {
+                return false;
+            }
+            else if (dt.Rows.Count > 0)
+            {
+                Agent = dt;
                 return true;
             }
             return false;

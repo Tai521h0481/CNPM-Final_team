@@ -1,17 +1,52 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDistributor.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GoodDelivery</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<h2>List Orders</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Order ID
+            </th>
+            <th>
+                Total Quantity
+            </th>
+            <th>
+                Total Price
+            </th>
+            <th>Ordered Date</th>
+            <th>Status</th>
+            <th>Agent ID</th>
+            <th>Payment Method</th>
+            <th>Payment Status</th>
+            <th>Order Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var agents = ViewBag.Agents as IEnumerable<OrderItemsWeb.Models.Agent>;
+        }
+        @foreach (var order in Model)
+        {
+            var agentName = agents.FirstOrDefault(a => a.AgentID == order.AgentID).AgentName;
+            <tr>
+                <td><a href="/OrderCart/OrderDetail/@order.OrderID">@order.OrderID</a></td>
+                <td>@order.TotalOrderQuantity</td>
+                <td>@order.TotalOrderPrice$</td>
+                <td>@order.OrderedDate.ToShortDateString()</td>
+                <td>@order.Status</td>
+                <td>@agentName</td>
+                <td>@order.PaymentMethod</td>
+                <td>@order.PaymentStatus</td>
+                <td>@order.OrderStatus</td>
+                <td>@Html.ActionLink("Confirm", "ConfirmOrder", "Distributor", new { id = order.OrderID }, new { @class = "btn btn-primary" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="col-md-4 flex-column mx-auto">
+    <h2>Invoice</h2>
+    <p>Click here if you want to issue a confirmed invoice.</p>
+    @Html.ActionLink("Issue Confirmed Invoices", "IssueOrder", "Distributor", new { @class = "btn btn-success" })
+</div>

@@ -1,5 +1,5 @@
-﻿@{ 
-    Layout = null;
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDistributor.cshtml";
 }
 <!DOCTYPE html>
 
@@ -10,20 +10,22 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-
-<form class="form-horizontal">
-    <fieldset>
-
-        <!-- Form Name -->
-        <legend>PRODUCTS</legend>
-
-        <!-- Text input-->
+@using (Html.BeginForm("AddProduct", "Distributor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <form>
         <div class="form-group">
             <label class="col-md-4 control-label" for="product_id">Product Name</label>
             <div class="col-md-4">
                 <input id="name" name="name" placeholder="Product Name" class="form-control input-md" required="" type="text">
-
             </div>
         </div>
 
@@ -43,30 +45,32 @@
                 <input id="quantity" name="quantity" placeholder="Product Quantity" class="form-control input-md" required="" type="text">
             </div>
         </div>
-
+        @if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="alert alert-danger" style="text-align: center;">@ViewBag.Message</div>
+        }
         <div class="form-group">
             <div class="col-md-4 col-md-offset-4 text-center">
-                <button id="add" name="add" class="btn btn-primary">Add Product</button>
+                <button type="submit" id="add" name="add" class="btn btn-primary">Add Product</button>
             </div>
         </div>
-
-    </fieldset>
-</form>
+    </form>
+}
 
 <div class="row d-flex">
     <div class="col-md-4 flex-column mx-auto">
-        <h2>Go to cart</h2>
-        <p>Click here if you want to go to cart</p>
-        <p><a class="btn btn-success" href="/Products/Index">Go to Product &raquo;</a></p>
+        <h2>Go to Product</h2>
+        <p>Click here if you want to go to Product</p>
+        <p><a class="btn btn-success" href="/Distributor/Product">Go to Product &raquo;</a></p>
     </div>
     <div class="col-md-4 flex-column mx-auto">
-        <h2>Buy product</h2>
-        <p>Click here if you want to buy product</p>
+        <h2>Delivery Note</h2>
+        <p>Click here if you want to see the Delivery Note</p>
         <p><a class="btn btn-primary" href="/Distributor/GoodDelivery">Go to Delivery Note &raquo;</a></p>
     </div>
     <div class="col-md-4 flex-column mx-auto">
-        <h2>View status your order</h2>
-        <p>Click here if you want to see your status order.</p>
+        <h2>View</h2>
+        <p>Click here if you want to view statistics by month</p>
         <p><a class="btn btn-warning" href="/Distributor/GoodView">Go to View &raquo;</a></p>
     </div>
 </div>

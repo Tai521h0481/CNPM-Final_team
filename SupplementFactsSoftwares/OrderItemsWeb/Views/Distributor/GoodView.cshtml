@@ -1,17 +1,36 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_LayoutDistributor.cshtml";
 }
 
-<!DOCTYPE html>
+<!-- Required Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GoodView</title>
-</head>
-<body>
-    <div> 
+<!-- Required jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- HTML code for interface -->
+<div class="container">
+    <h2>Dashboard</h2>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="/Distributor/In_Out">Incoming/Outgoing</a></li>
+        <li><a href="/Distributor/BestSelling">Best Selling</a></li>
+        <li><a href="/Distributor/Revenue">Revenue</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="incoming" class="tab-pane fade in active">
+            <h3>Incoming/Outgoing</h3>
+        </div>
+
+        <div id="best-selling" class="tab-pane fade">
+            <h3>Best Selling</h3>
+        </div>
+
+        <div id="revenue-by-month" class="tab-pane fade">
+            <h3>Revenue by Month</h3>
+            <!-- Code for revenue by month data -->
+        </div>
     </div>
-</body>
-</html>
+</div>

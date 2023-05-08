@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDistributor.cshtml";
+}
+
+<h2>List Products</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Product Name
+            </th>
+            <th>
+                Total Product Quantity
+            </th>
+            <th>
+                Product Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.ProductQuantity > 0)
+            {
+                <tr>
+                    <td>
+                        @item.ProductName
+                    </td>
+                    <td>
+                        @item.ProductQuantity
+                    </td>
+                    <td>
+                        @item.ProductPrice$
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
