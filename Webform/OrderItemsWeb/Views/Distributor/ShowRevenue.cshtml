@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutDistributor.cshtml";
+}
+
+<h2>Incoming/Outgoing</h2>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    select#month {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin: 20px 0;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Month</th>
+            <th>Total Revenue</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Revenue in Model)
+        {
+            <tr>
+                <td>@Revenue.Year</td>
+                <td>@Revenue.Month</td>
+                <td>@Revenue.TotalRevenue</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@using (Html.BeginForm("ShowRevenue", "Distributor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <label for="month">Select a month:</label>
+    <select id="month" name="month">
+        @for (int i = 1; i <= 12; i++)
+        {
+            <option value="@i">@i</option>
+        }
+    </select>
+    <div class="form-group">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <button type="submit" id="add" name="add" class="btn btn-primary">View</button>
+        </div>
+    </div>
+}
+
+<div class="col-md-4 flex-column mx-auto">
+    <h2>View</h2>
+    <p>Click here if you want to view statistics</p>
+    <p><a class="btn btn-warning" href="/Distributor/GoodView">&laquo; Back</a></p>
+</div>

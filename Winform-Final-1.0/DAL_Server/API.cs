@@ -78,6 +78,29 @@ CREATE TABLE Distributor
   DistributorPassword NVARCHAR(50) NOT NULL
 );
 
+CREATE TABLE StockReport
+(
+  ReportID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  ReportDate DATE NOT NULL,
+  IncomingStock INT NOT NULL,
+  OutgoingStock INT NOT NULL
+);
+
+CREATE TABLE BestSellingProduct
+(
+  ProductID VARCHAR(10) NOT NULL PRIMARY KEY,
+  ProductName NVARCHAR(50) NOT NULL,
+  TotalSales INT NOT NULL,
+  CONSTRAINT FkBestSellingProduct_ProductID FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+CREATE TABLE RevenueReport
+(
+  ReportID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  ReportMonth INT NOT NULL,
+  ReportYear INT NOT NULL,
+  TotalRevenue INT NOT NULL
+);
  */
 
 namespace DAL_Server
@@ -88,13 +111,8 @@ namespace DAL_Server
         public static bool CheckLoginWithDistributor(string distributorAccount, string distributorPassword)
         {
             string sql = "SELECT * FROM Distributor WHERE DistributorAccount = '" + distributorAccount + "' AND DistributorPassword = '" + distributorPassword + "'";
-            DataTable dt = new DataTable();
-            dt = Connection.SelectQuery(sql);
-            if (dt == null)
-            {
-                return false;
-            }
-            else if (dt.Rows.Count > 0)
+            DataTable dt = Connection.SelectQuery(sql);
+            if (dt.Rows.Count > 0)
             {
                 return true;
             }
@@ -106,13 +124,9 @@ namespace DAL_Server
         {
             string sql = "SELECT * FROM Agent WHERE AgentAccount = '" + agentAccount + "' AND AgentPassword = '" + agentPassword + "'";
             DataTable dt = Connection.SelectQuery(sql);
-            if (dt == null)
+            Agent = dt;
+            if (dt.Rows.Count > 0)
             {
-                return false;
-            }
-            else if (dt.Rows.Count > 0)
-            {
-                Agent = dt;
                 return true;
             }
             return false;
@@ -255,8 +269,22 @@ namespace DAL_Server
         // tạo IncludeImportedProducts
         public static void CreateIncludeImportedProducts(int totalProductQuantity, int totalProductPrice, string ReceiptID, string productID)
         {
-            string sql = "INSERT INTO IncludeImportedProducts VALUES (" + totalProductQuantity + ", " + totalProductPrice + ", '" + ReceiptID + "', '" + productID + "')";
-            Connection.ActionQuery(sql);
+            string sql = "SELECT * FROM IncludeImportedProducts WHERE ProductID = '" + productID + "'";
+            DataTable dt = Connection.SelectQuery(sql);
+            if (dt != null)
+            {
+                int oldProductQuantity = int.Parse(dt.Rows[0][0].ToString());
+                int oldProductPrice = int.Parse(dt.Rows[0][1].ToString());
+                int newProductQuantity = oldProductQuantity + totalProductQuantity;
+                int newProductPrice = oldProductPrice + totalProductPrice;
+                sql = "UPDATE IncludeImportedProducts SET TotalProductQuantity = " + newProductQuantity + ", TotalProductPrice = " + newProductPrice + " WHERE ProductID = '" + productID + "'";
+                Connection.ActionQuery(sql);
+            }
+            else
+            {
+                sql = "INSERT INTO IncludeImportedProducts VALUES (" + totalProductQuantity + ", " + totalProductPrice + ", '" + ReceiptID + "', '" + productID + "')";
+                Connection.ActionQuery(sql);
+            }
         }
         // thêm sản phẩm vào bảng Product hoặc cập nhật số lượng sản phẩm nếu đã tồn tại (ID, name, price, quantity)
         public static string AddOrUpdateProduct(string productID, string productName, int productPrice, int productQuantity)

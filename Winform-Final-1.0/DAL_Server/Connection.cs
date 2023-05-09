@@ -31,7 +31,6 @@ namespace DAL_Server
             Connect();
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-            // kiểm tra xem có dữ liệu hay không để tránh lỗi
             if (adapter.Fill(dt) > 0)
             {
                 return dt;

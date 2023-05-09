@@ -185,6 +185,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Css_JS_Login\img1.jpg" />
     <Content Include="Css_JS_Login\JavaScript.js" />
     <Content Include="Css_JS_Login\site.css" />
     <Content Include="favicon.ico" />
@@ -261,6 +262,9 @@
     <Content Include="Views\Distributor\In_Out.cshtml" />
     <Content Include="Views\Distributor\BestSelling.cshtml" />
     <Content Include="Views\Distributor\Revenue.cshtml" />
+    <Content Include="Views\Distributor\ShowBSelling.cshtml" />
+    <Content Include="Views\Distributor\Show_In_Out.cshtml" />
+    <Content Include="Views\Distributor\ShowRevenue.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

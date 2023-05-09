@@ -64,28 +64,28 @@ C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-F
 C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.CopyComplete
 C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.exe
 C:\Users\LENOVO\OneDrive\Máy tính\CNPM_Final_git_1.0\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.pdb
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\Winform_Final.exe.config
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\Winform_Final.exe
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\Winform_Final.pdb
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\DAL_Server.dll
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\itextsharp.dll
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\DAL_Server.pdb
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\bin\Debug\itextsharp.xml
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.AssemblyReference.cache
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.SuggestedBindingRedirects.cache
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AddGood_Dis.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentOrder.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentMenu.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentPayment.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentView.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.DeliveryNote.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.DistributorForm.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.LoginForm.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.Properties.Resources.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.View.resources
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.GenerateResource.cache
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.CoreCompileInputs.cache
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.CopyComplete
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.exe
-C:\Users\LENOVO\OneDrive\Máy tính\give\CNPM-Final_team\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.pdb
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\Winform_Final.exe.config
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\Winform_Final.exe
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\Winform_Final.pdb
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\DAL_Server.dll
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\itextsharp.dll
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\DAL_Server.pdb
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\bin\Debug\itextsharp.xml
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.AssemblyReference.cache
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AddGood_Dis.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentOrder.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentMenu.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentPayment.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.AgentView.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.DeliveryNote.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.DistributorForm.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.LoginForm.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.Properties.Resources.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.View.resources
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.GenerateResource.cache
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.csproj.CopyComplete
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.exe
+C:\Users\LENOVO\OneDrive\Máy tính\upcode CNPM\Winform-Final-1.0\Winform_Final\obj\Debug\Winform_Final.pdb
